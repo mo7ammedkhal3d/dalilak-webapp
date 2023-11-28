@@ -1,0 +1,102 @@
+/*#region Special Dishes */
+
+.special-dishes{
+  width: 92%;
+  margin: 4% auto;
+  position: relative;
+}
+
+.special-dishes > p {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 15px 0;
+  font-family: 'tofan';
+}
+
+.special-dishes > h1{
+  text-align: right;
+  margin: 30px 0;
+  line-height: 1.2;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: 'boutrosAsma';
+  color: black;
+}
+
+.next-previous{
+  display: flex;
+  right: 0%;      
+  grid-gap: 2em;
+  top: 22%;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.special-dishes .left-link ,
+.special-dishes .right-link{
+  font-size: 2.3rem;
+  padding: 1rem 0.5rem;
+  color: #26507370;
+  background-color: #2d959663;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+}
+
+.special-dishes .left-link:hover ,
+.special-dishes .right-link:hover{
+  color: var(----primary-color);
+  background-color: var(--secondry-color);
+}
+
+.special-dishes .right-link{
+   right: -3%;
+   border-radius: 0 1rem 1rem 0;
+  }
+.special-dishes .left-link{
+   left: -3%; 
+   border-radius: 1rem 0 0 1rem;
+  }
+
+.meals-slider{
+  display: flex;
+  overflow: hidden;
+  grid-gap: 2em;
+  width: 100%;
+  margin: 4% auto;
+}
+
+.meals-slider .inner{
+  display: flex;
+  grid-gap: 2em;
+  list-style: none;
+  transition: all 1s ease-in-out;
+}
+
+/* .meals-slider .inner .slide{
+  position: relative;
+  font-weight: bold;
+  width: 376px;
+  height: 410px;
+  padding: 25px 25px 10px 25px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 12px #0055;
+} */
+
+/* .meals-slider .inner .slide .fattuoush-salad,
+.meals-slider .inner .slide .vegetable-salad,
+.meals-slider .inner .slide .egg-vegi-salad{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+} */
+
+.meals-slider .inner .slide img{
+  width: 100%;
+}
+
+
+/*#endregion Special Dishes */

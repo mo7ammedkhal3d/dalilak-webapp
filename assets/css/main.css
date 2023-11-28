@@ -1,0 +1,299 @@
+/*#region Fonts*/
+
+@font-face {
+    font-family: 'tofan';
+    src: url(../fonts/tofan.ttf);
+}
+
+@font-face {
+    font-family: 'boutrosAsma';
+    src: url(../fonts/boutrosAsma.ttf);
+}
+
+/*#endregion */
+
+/*#region Variable*/
+
+:root{
+    --primary-color:#2D9596;
+    --secondry-color:#265073;
+    --text-color:#4f4f4f;
+    --color:linear-gradient(to right, #ede574, #e1f5c4);
+}
+
+/*#endregion */
+
+/*#region Reset Defult*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    direction: rtl;
+    background-color: #b7b4b400;
+}
+
+/*#endregion */
+
+/*#region HEADER*/
+
+header{
+    position: relative;
+    height: 100vh;
+}
+
+/*#region Nav*/
+
+.edit-nav{
+    background-color:var(--primary-color) ;
+}
+
+.edit-navbar-brand{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+    font-family: 'tofan';
+}
+
+.edit-navbar-brand:hover{
+    color: orange;
+}
+
+.navbar-expand-lg .edit-navigation .nav-link {
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.edit-title{
+    font-family: 'tofan';
+    text-align: center;
+    width: 52%;
+}
+
+.searsh-area{
+    position: relative;
+    width: 33%;
+    margin-left: 2vw;
+}
+
+.searsh-area input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5vw;
+    padding: 0 3vw;
+}
+
+.searsh-area input:focus{
+    outline: 0.2vw solid var(--secondry-color);
+}
+
+.searsh-area .searsh-icon{
+    position: absolute;
+    color: #b7b4b4;
+    font-size: 1.8vw;
+    top: 20%;
+    right: 2%;
+}
+
+/*#endregion */
+
+/*#region Hero  */
+
+.hero-slider .previous-slide-icon,
+.hero-slider .next-slide-icon{
+    font-size: 1.5vw;
+    background-color: white;
+    padding: 1vw;
+    color: var(--primary-color);
+}
+
+.carousel-indicators .edit-data-bs-target{
+    background-color: var(--primary-color);
+    height: 1.5vw;
+    width: 1.5vw;
+    border-radius: 50%;
+}
+
+.dental-practice{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    top: 15%;
+    left: 17%;
+}
+
+.first-dental-practice{
+    top: 35%;
+    right: 29%;
+}
+
+.dental-practice > *{
+    display: inline-block;
+    border-radius: 0.2rem;
+    width: fit-content;
+}
+
+.dental-practice p{
+    color: white;
+    font-size: 2vw;
+    text-transform: uppercase;
+    padding: 0.4vw 0.7vw;
+    margin: 0.6vw 0;
+    background-color: var(--secondry-color);
+}
+
+.dental-practice h1{
+    background-color: white;
+    color: black;
+    font-size: 3.2vw;
+    padding: 0.3vw 0.5vw;
+}
+
+.first-dental-practice h1{padding: 0.7vw 1.2vw;}
+.first-dental-practice p{
+    margin-right: 13vw;
+    padding: 0.7vw 1.5vw;
+}
+
+.dental-practice button:first-of-type ,
+.dental-practice button:last-of-type{
+    font-size: 1.2vw;
+    padding: 0.7vw 0.5vw;
+    width: 10vw;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    border: none;
+}
+
+.dental-practice button:first-of-type{
+    color: white;
+    background-color: var(--primary-color);
+    margin-right: 0.5vw;
+}
+
+.dental-practice button:last-of-type{
+    color: var(--font-primary-color);
+    background-color: var(--secondry-color);
+    margin-left: 0.5vw;
+}
+
+.edit-lannding-img{
+    width: 100%;
+}
+ 
+
+
+/*#endregion Hero  */
+
+
+
+
+/*#endregion */
+
+/*#region MAIN*/
+
+/*#region Home*/
+
+.edit-container{
+    max-width: 1300px;
+}
+
+.edit-row{
+    row-gap: 1rem;
+}
+
+.edit-card{
+    border: 0.1rem solid var(--secondry-color);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.edit-card:hover{
+    transform: scale(1.03);
+}
+
+.edit-card .card-body{
+    transition: all 0.5s ease;
+}
+
+.edit-card:hover .card-body{
+    background-color: var(--primary-color);
+}
+
+.edit-card .card-body h5{
+transition: all 0.5s ease;
+}
+
+.edit-card:hover .card-body h5{
+    text-align: center;
+    color: white;
+}
+
+.edit-card:hover .card-text{
+    color: #fff;
+}
+
+.edit-card .card-text{
+    font-family: 'boutrosAsma';
+    color: var(--text-color);
+}
+
+.edit-card .card-body p:nth-of-type(1){
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+/*#endregion */
+
+/*#region Historical-Landmarks*/
+
+
+
+/*#endregion */
+
+/*#region Markets*/
+
+
+
+/*#endregion */
+
+/*#region Parks*/
+/*#endregion */
+
+/*#region Chalets*/
+/*#endregion */
+
+/*#region Show-Details*/
+
+.show-detalies .description p{
+    font-family: 'boutrosAsma';
+    font-weight: 600;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+/*#endregion */
+
+
+/*#region FOOTER*/
+
+footer{
+    background-color: var(--primary-color);
+}
+
+/*#endregion */
+
+
+
+
+
+
