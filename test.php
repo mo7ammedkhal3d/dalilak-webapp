@@ -32,13 +32,10 @@ foreach ($categories as $category) {
             <h1><?php echo $category['Description'] ?></h1>
             <!-- <h1>تعتبر أحد أشهر الأماكن للبحث في حقائب الماضي السحيق</h1> -->
             <a href='<?php echo $category['EngName'] ?>?categoryId=<?php echo $category['Id'] ?>' class="btn btn-outline-info w-25 float-start fw-bold my-4">رؤية المزيد</a>
-            <!-- <i onclick="nextSlide(this)" class="fa-solid fa-chevron-right right-link"></i> -->
-            <i class="fa-solid fa-chevron-right right-link"></i>
-            <input type="hidden" value="0">
-            <!-- <i onclick="previousSlide(this)" class="fa-solid fa-chevron-left left-link"></i> -->
-            <i class="fa-solid fa-chevron-left left-link"></i>
+            <i onclick="nextSlide()" class="fa-solid fa-chevron-right right-link"></i>
+            <i onclick="previousSlide()" class="fa-solid fa-chevron-left left-link"></i>
             <div class="meals-slider">
-                <div class="inner">
+                <div class="inner row row-cols-1 row-cols-sm-2  row-cols-md-3 row-cols-lg-4">
                     <?php
                     $sql = "SELECT places.Id,places.Name ,places.Description,places.ImgUrl FROM places JOIN category ON places.CategoreId=category.Id  where CategoreId=" . $category['Id'];
                     try {

@@ -1,19 +1,34 @@
-const slides =document.getElementsByClassName('slide');
+$(document).ready(function(){
+    var nextbuttons = $('.right-link');
+    var previousbuttons = $('.left-link');
 
-let amount = 0;
+    $.each(nextbuttons, function(index, nextbutton) {
+        $(nextbutton).on('click', function() {
+            var parent = $(this).parent();
+            var innerTarget = parent.find('.inner');
+            var slides = innerTarget.find('.slide');
+            var amount = parent.find('input');
 
-function nextSlide(){
+            if (amount.val() > 0) {
+                amount.val(parseFloat(amount.val()) - 100 / slides.length);
+                innerTarget.css('transform', 'translateX(' + amount.val() + '%)');
+            }
 
-    if(amount > -(slides.length-3)*(100/9)){
-        amount +=100/slides.length;
-        document.getElementsByClassName('inner')[0].style.transform=`translateX(${amount}%)`;
-    }        
-}
+        });
+    });
 
-function previousSlide(){
+    $.each(previousbuttons, function(index, previousbutton) {
+        $(previousbutton).on('click', function() {
+            var parent = $(this).parent();
+            var innerTarget = parent.find('.inner');
+            var slides = innerTarget.find('.slide');
+            var amount = parent.find('input');
 
-    if(amount<0){
-        amount -=100/slides.length;
-        document.getElementsByClassName('inner')[0].style.transform=`translateX(${amount}%)`;
-    }
-}
+            if (amount.val() < (slides.length - 4) * (100 / slides.length)) {
+                amount.val(parseFloat(amount.val()) + 100 / slides.length);
+                innerTarget.css('transform', 'translateX(' + amount.val() + '%)');
+            }
+
+        });
+    });
+});

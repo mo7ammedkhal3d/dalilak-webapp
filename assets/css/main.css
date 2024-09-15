@@ -212,7 +212,8 @@ header{
 .edit-card{
     border: 0.1rem solid var(--secondry-color);
     cursor: pointer;
-    transition: all 0.5s ease;
+    width: 21.92vw;
+    transition: all 0.5s ease
 }
 
 .edit-card:hover{
@@ -221,6 +222,12 @@ header{
 
 .edit-card .card-body{
     transition: all 0.5s ease;
+    min-height: 14.5rem;
+}
+
+.edit-card > img{
+    width: 100%;
+    height: 26.5vh;
 }
 
 .edit-card:hover .card-body{

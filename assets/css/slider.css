@@ -69,7 +69,7 @@
 
 .meals-slider .inner{
   display: flex;
-  grid-gap: 2em;
+  grid-gap: 1vw;
   list-style: none;
   transition: all 1s ease-in-out;
 }
@@ -94,9 +94,9 @@
   cursor: pointer;
 } */
 
-.meals-slider .inner .slide img{
-  width: 100%;
-}
+/* .meals-slider .inner .slide img{
+
+} */
 
 
 /*#endregion Special Dishes */

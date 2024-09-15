@@ -12,11 +12,12 @@ $placeId = $_GET['placeId'];
 if (isset($placeId)) {
     $conn = db_connect($db_server, $db_user, $db_user_pass, $db_name);
 
-    $sql = "SELECT * FROM places WHERE Id = $placeId";
-    $result = $conn->query($sql);
+    $place = db_select($conn,'places','*',"places.Id = $placeId");     
 
-    if ($result->num_rows > 0) {
-    $place = $result->fetch_assoc();
+    // $result = $conn->query($sql);
+
+    // if ($result->num_rows > 0) {
+    // $place = $result->fetch_assoc();
 
     // $place = db_select($conn, 'places', '*', 'places.Id=' . $placeId);
     $attachments = db_select($conn, 'attachments', '*', 'attachments.PlaceId=' . $placeId); ?>
@@ -26,7 +27,7 @@ if (isset($placeId)) {
             <div class="row">
                 <div class="head-title">
                     <h1 class="text-center my-5">
-                        <?php echo $place['Name'] ?>
+                        <?php echo $place[0]['Name'] ?>
                     </h1>
                 </div>
                 <div class="show-img my-5">
@@ -66,12 +67,12 @@ if (isset($placeId)) {
                 </div>
                 <div class="description">
                     <p>
-                        <?php echo $place['Description'] ?>
+                        <?php echo $place[0]['Description'] ?>
                     </p>
                 </div>
                 <div class="show">
                     <iframe
-                    src="<?php echo$place['MapSrc'];?>"
+                    src="<?php echo$place[0]['MapSrc'];?>"
                         width="600"
                         height="450"
                         style="border:0; height: 50vw; width: 80vw; margin: 2% auto;"
@@ -81,6 +82,4 @@ if (isset($placeId)) {
                 </div>
         </div>
     </section>
-<?php } 
-$conn->close();
-}?>
+<?php } ?>
